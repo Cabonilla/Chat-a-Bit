@@ -1,9 +1,21 @@
-import React from 'react'
+import 'bulma/css/bulma.min.css';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Join= () => {
+	const [name, setName] = useState('');
+	const [room, setRoom] = useState('');
+
 	return (
-		<div>
-			<h1>Join</h1>
+		<div className="joinOuterContainer">
+			<div className="joinInnerContainer">
+				<h1 className="title heading">Join</h1>
+				<div><input placeholder="" className="input joinInput" type="text" onChange={(e) => setName(e.target.value)}></input></div>
+				<div><input placeholder="" className="input joinInput mt-20" type="text" onChange={(e) => setRoom(e.target.value)}></input></div>
+				<Link onClick={event => (!name || !room) ? event.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
+					<button className="button mt-20" type="submit">Sign In</button>
+				</Link>
+			</div>
 		</div>
 	)
 }
