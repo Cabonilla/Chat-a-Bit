@@ -53,10 +53,10 @@ const Chat = ({location}) => {
 			<div className="innerContainer">
 				<input 
 				value={message} 
-				onChange={(e) => {
-					setMessage(e.target.value)
+				onChange={(event) => {
+					setMessage(event.target.value)
 				}}
-				onKeyPress={(e) => e.key === 'Enter' ? sendMessage() : null}
+				onKeyPress={(event) => event.key === 'Enter' ? sendMessage(event) : null}
 				/> 
 			</div>
 		</div>
