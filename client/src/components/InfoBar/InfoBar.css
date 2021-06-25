@@ -1,17 +1,18 @@
 img {
 	width: .75em;
 	height: auto;
-  filter: invert(.5)
+  filter: invert(1)
 }
 
 .infoBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #dddddd;
+  background: #3b3b3b;
   border-radius: 4px 4px 0 0;
   height: 60px;
   width: 100%;
+  border-radius: 5px 5px 2px 2px;
 }
 
 .leftInnerContainer {
@@ -38,6 +39,11 @@ h3 {
 } 
 
 .room {
-  color: black;
+  color: white;
   font-weight: 500;
+}
+
+.onlineIcon {
+  filter: invert(89%) sepia(11%) saturate(1157%) hue-rotate(73deg) brightness(103%) contrast(84%);
+  width: 10px;
 }
