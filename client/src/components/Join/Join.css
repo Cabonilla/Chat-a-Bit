@@ -21,7 +21,7 @@
 	height: 100vh;
 }
 
-button {
+#submitButton {
 	margin-top: 10px;
 	text-decoration: none;
 }

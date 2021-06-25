@@ -1,4 +1,4 @@
-img {
+.onlineIcon, .closeIcon {
 	width: .75em;
 	height: auto;
   filter: invert(1)
