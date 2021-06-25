@@ -1,3 +1,4 @@
+import React from 'react'
 import closeIcon from '../../icons/closeIcon.svg'
 import onlineIcon from '../../icons/onlineIcon.svg'
 import './InfoBar.css'

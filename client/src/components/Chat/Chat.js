@@ -13,7 +13,7 @@ const Chat = ({location}) => {
 	const [room, setRoom] = useState('');
 	const [message, setMessage] = useState('')
 	const [messages, setMessages] = useState([])
-	const ENDPOINT = 'localhost:9001'
+	const ENDPOINT = 'https://chat-a-bit-app.herokuapp.com/'
 
 	useEffect(() => {
 		const {name, room} = queryString.parse(location.search);
