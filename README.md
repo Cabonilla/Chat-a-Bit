@@ -8,3 +8,5 @@ A simple, full-stack chat app built with React JS and Socket IO. This app is fas
 
 * Realtime data transference with Socket. 
 * Data handling and mitigation with React's hooks. 
+* Using CSS libraries with React. 
+* Node JS server debugging. 
