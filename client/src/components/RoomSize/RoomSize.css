@@ -1,20 +1,26 @@
 .online {
 	width: .75em;
 	height: auto;
-	fill: red;
 }
 
 .currently-online {
 	position: fixed;
 	margin-top: 10px;
+	height: auto;
 }
 
 .activeContainer {
 	display: flex;
-	width: 35vw;
 	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .activeItem {
 	margin: 0 1em 0 1em;
+}
+
+.RoomSize {
+	display: flex;
+	justify-content: center;
 }
