@@ -1,11 +1,15 @@
 .online {
 	width: .75em;
 	height: auto;
+	margin-left: .5em;
+	filter: invert(89%) sepia(11%) saturate(1157%) hue-rotate(
+73deg
+) brightness(103%) contrast(84%);
 }
 
 .currently-online {
 	position: fixed;
-	margin-top: 10px;
+	/* margin-top: 10px; */
 	height: auto;
 }
 
@@ -19,6 +23,15 @@
 
 .activeItem {
 	margin: 0 1em 0 1em;
+	width: 7em;
+	height: 2em;
+	background-color: #F3F3F3;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* color: white; */
+	margin-top: 10px;
 }
 
 .RoomSize {
