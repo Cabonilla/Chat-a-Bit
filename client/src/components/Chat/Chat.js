@@ -4,6 +4,7 @@ import io from 'socket.io-client';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 import Messages from '../Messages/Messages';
+import RoomSize from '../RoomSize/RoomSize';
 import './Chat.css';
 
 let socket;
@@ -11,6 +12,7 @@ let socket;
 const Chat = ({location}) => {
 	const [name, setName] = useState('');
 	const [room, setRoom] = useState('');
+	const [users, setUsers] = useState('');
 	const [message, setMessage] = useState('')
 	const [messages, setMessages] = useState([])
 	const ENDPOINT = 'localhost:9001/'
@@ -37,7 +39,12 @@ const Chat = ({location}) => {
 	useEffect(() => {
 		socket.on('message', (message) => {
 			setMessages([...messages, message])
-		})
+		});
+
+		socket.on("roomData", ({ users }) => {
+			setUsers(users);
+		});
+
 	}, [messages])
 
 	const sendMessage = (event) => {
@@ -58,6 +65,7 @@ const Chat = ({location}) => {
 				<InfoBar room={room}/>
 				<Messages messages={messages} name={name}/>
 				<Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+				<RoomSize users={users} />
 			</div>
 		</div>
 	)

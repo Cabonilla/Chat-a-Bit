@@ -1,3 +1,7 @@
+*, .sentText, .room {
+  font-family: "IBM Plex Mono"
+}
+
 .outerContainer {
   display: flex;
   justify-content: center;
